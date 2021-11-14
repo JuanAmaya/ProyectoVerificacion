@@ -264,6 +264,7 @@ function logout() {
     .signOut()
     .then(function () {
       // Sign-out succesful.
+      alert("Se ha salido de la sesion");
     })
     .catch(function (error) {
       // An error happend.
@@ -286,7 +287,13 @@ function resetPassword() {
       alert("Se ha enviado un mensaje a tu correo, favor de checarlo.");
     })
     .catch(function (error) {
-      alert("Error: " + error.message);
+      const errorCode = error.code;
+
+      if (errorCode === "auth/invalid-email") {
+        alert("Error: El correo ingresado no es valido");
+      } else if (errorCode === "auth/user-not-found") {
+        alert("El correo no esta registrado");
+      }
     });
 }
 
