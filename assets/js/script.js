@@ -125,7 +125,7 @@ function cargarAuto() {
   document.getElementById("cita-auto").value = autoCita;
 }
 
-function ordenarCita() {
+function ordenarCita(pagina) {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       var uid = user.uid;
@@ -133,7 +133,7 @@ function ordenarCita() {
         window.location.href = "./citas.html";
       }
     } else {
-      window.location.href = "./registro.html";
+      window.location.href = "../src/registro.html";
       alert("Debes de tener cuenta para pedir una cita.");
     }
   });
