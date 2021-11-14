@@ -133,7 +133,7 @@ function ordenarCita(pagina) {
         window.location.href = "./citas.html";
       }
     } else {
-      window.location.href = "./src/registro.html";
+      window.location.href = "./registro.html";
       alert("Debes de tener cuenta para pedir una cita.");
     }
   });
