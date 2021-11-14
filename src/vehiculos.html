@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="./../assets/styles/style.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script
+      type="text/javascript"
+      src="./../assets/js/script.js"
+      async
+    ></script>
+
+    <title>Matacars</title>
+  </head>
+  <body onload="cartasVehiculos()">
+    <header class="barra-menu">
+      <nav>
+        <div class="nav-links">
+          <div class="logo">
+            <h1>MATACARS</h1>
+          </div>
+          <div class="secciones menu">
+            <a href="./../index.html">
+              <i class="uil uil-estate"></i>
+              <span>Inicio</span>
+            </a>
+            <a href="./vehiculos.html" class="pagina-actual">
+              <i class="uil uil-car"></i>
+              <span>Vehiculos</span>
+            </a>
+            <a id="pagina-citas" onclick="ordenarCita()">
+              <i class="uil uil-calendar-alt"></i>
+              <span>Citas</span>
+            </a>
+          </div>
+          <div class="botones menu">
+            <a href="./registro.html" id="registrar-ses"
+              ><div class="registro">Registrate</div></a
+            >
+            <a href="./inicio-sesion.html" id="abrir-ses">
+              <div class="inicio-sesion" id="abrir-ses">Inicia Sesion</div></a
+            >
+            <a class="cerrar-sesion" id="cerrar-ses" onclick="logout()">
+              Cerrar Sesion
+            </a>
+          </div>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="cartas-vehiculos"></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js" async></script>
+
+    <title>Matarcars</title>
+  </head>
+  <body>
+    <header class="barra-menu">
+      <nav>
+        <div class="nav-links">
+          <div class="logo">
+            <h1>MATACARS</h1>
+          </div>
+          <div class="secciones menu">
+            <a href="./index.html" class="pagina-actual">
+              <i class="uil uil-estate"></i>
+              <span>Inicio</span>
+            </a>
+            <a href="./src/vehiculos.html">
+              <i class="uil uil-car"></i>
+              <span>Vehiculos</span>
+            </a>
+            <a
+              href="./src/citas.html"
+              id="pagina-citas"
+              onclick="ordenarCita()"
+            >
+              <i class="uil uil-calendar-alt"></i>
+              <span>Citas</span>
+            </a>
+          </div>
+          <div class="botones menu">
+            <a href="./src/registro.html" id="registrar-ses"
+              ><div class="registro">Registrate</div></a
+            >
+            <a href="./src/inicio-sesion.html" id="abrir-ses">
+              <div class="inicio-sesion" id="abrir-ses">Inicia Sesion</div></a
+            >
+            <a class="cerrar-sesion" id="cerrar-ses" onclick="logout()">
+              Cerrar Sesion
+            </a>
+          </div>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-inicio">
+      <div class="seccion-somos">
+        <h2>¿QUIENES SOMOS?</h2>
+        <hr />
+        <div class="acomodo">
+          <img
+            src="./assets/images/inicio/Somos.jpg"
+            alt="Imagen Somos"
+            class="imagen-inicio"
+          />
+          <p>
+            Somos una empresa dedicada a la compra y venta de vehículos usados o
+            seminuevos. Contamos con diferentes autos en nuestro inventario,
+            desde motocicletas hasta tractocamiones. Aceptamos tarjetas de
+            crédito a 12 meses sin intereses para la facilidad del comprador.
+            ¡Encuentra tu auto ideal con nosotros!
+          </p>
+        </div>
+      </div>
+      <div class="seccion-concesionaria">
+        <h2>NUESTRA CONCESIONARIA</h2>
+        <hr />
+        <div class="acomodo">
+          <p>
+            Con tantos vehículos nuevos y seminuevos, no es de extrañar por qué
+            MataCars se ha convertida en una de las principales concesionarias
+            en Guadalupe. Desde 1999, nos hemos esforzado por brindar
+            asesoramiento de calidad a nuestros clientes sobre los mejores
+            vehículos en el mercado. Ofrecemos una amplia gama de opciones, y
+            nuestro equipo de profesionales está aquí para satisfacer todas sus
+            necesidades.
+          </p>
+          <img
+            src="./assets/images/inicio/concesionaria.jpg"
+            alt="Imagen concesionaria"
+            class="imagen-inicio"
+          />
+        </div>
+      </div>
+      <div class="seccion-oficinas">
+        <h3>Visita nuestras oficinas!</h3>
+        <p>
+          San Felipe #453 Col. Villas de San Sebastián CP 64103 Guadalupe N.L.
+        </p>
+        <br />
+        <h3>Horas de atención</h3>
+        <p>Lunes a Viernes: 8 a.m. - 4 p.m.</p>
+        <p>Sabado: 9 a.m. - 3 p.m.</p>
+        <p>Domingo Cerrado</p>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="./../assets/styles/style.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script
+      type="text/javascript"
+      src="./../assets/js/script.js"
+      async
+    ></script>
+
+    <title>Matacars</title>
+  </head>
+  <body>
+    <header class="barra-menu">
+      <nav>
+        <div class="nav-links">
+          <div class="logo">
+            <h1>MATACARS</h1>
+          </div>
+          <div class="secciones menu">
+            <a href="./../index.html">
+              <i class="uil uil-estate"></i>
+              <span>Inicio</span>
+            </a>
+            <a href="./vehiculos.html">
+              <i class="uil uil-car"></i>
+              <span>Vehiculos</span>
+            </a>
+            <a id="pagina-citas" onclick="ordenarCita()">
+              <i class="uil uil-calendar-alt"></i>
+              <span>Citas</span>
+            </a>
+          </div>
+          <div class="botones menu">
+            <a href="./registro.html" id="registrar-ses"
+              ><div class="registro">Registrate</div></a
+            >
+            <a href="./inicio-sesion.html" id="abrir-ses">
+              <div class="inicio-sesion" id="abrir-ses">Inicia Sesion</div></a
+            >
+            <a class="cerrar-sesion" id="cerrar-ses" onclick="logout()">
+              Cerrar Sesion
+            </a>
+          </div>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h2>¡Registrate!</h2>
+      <hr />
+      <div class="carta-form">
+        <form action="">
+          <div class="seccion-input">
+            <label for="">Nombre</label>
+            <input type="text" id="nombre" />
+          </div>
+          <div class="seccion-input">
+            <label for="">Correo Electronico</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="seccion-input">
+            <label for="">Contraseña</label>
+            <input type="password" id="password" />
+          </div>
+          <button onclick="signUp()" type="button">Registrar</button>
+
+          <hr class="separador" />
+          <div class="si-cuenta">
+            <p>¿Ya tienes una cuenta?</p>
+            <a href="./inicio-sesion.html"> Inicia Sesión </a>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

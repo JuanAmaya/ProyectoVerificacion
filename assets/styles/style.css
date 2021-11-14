@@ -1,0 +1,715 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f0f2f5;
+}
+
+.barra-menu {
+  background: #f6f7fa;
+  -webkit-box-shadow: 0 0 20px rgba(65, 29, 29, 0.1);
+          box-shadow: 0 0 20px rgba(65, 29, 29, 0.1);
+}
+
+.barra-menu nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.barra-menu nav .nav-links .logo {
+  color: #c9605e;
+  pointer-events: none;
+}
+
+.barra-menu nav .nav-links .secciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.barra-menu nav .nav-links .secciones a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  background: #f6f7fa;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.barra-menu nav .nav-links .secciones a i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  color: #c9605e;
+}
+
+.barra-menu nav .nav-links .secciones a span {
+  color: #7e919c;
+}
+
+.barra-menu nav .nav-links .secciones a:hover {
+  background: #d0d4d8;
+}
+
+.barra-menu nav .nav-links .secciones .pagina-actual {
+  background: #ebeff3;
+}
+
+.barra-menu nav .nav-links .botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.barra-menu nav .nav-links .botones a {
+  text-decoration: none;
+}
+
+.barra-menu nav .nav-links .botones .registro {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #c9605e;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-weight: 700;
+  cursor: pointer;
+  background: #c9605e;
+  color: white;
+}
+
+.barra-menu nav .nav-links .botones .registro:hover {
+  background: white;
+  color: #c9605e;
+}
+
+.barra-menu nav .nav-links .botones .inicio-sesion {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #c9605e;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-weight: 700;
+  cursor: pointer;
+  background: #f6f7fa;
+  color: #c9605e;
+}
+
+.barra-menu nav .nav-links .botones .inicio-sesion:hover {
+  background: #c9605e;
+  color: #f6f7fa;
+}
+
+.barra-menu nav .nav-links .botones .cerrar-sesion {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #c9605e;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-weight: 700;
+  cursor: pointer;
+  background: #f6f7fa;
+  color: #c9605e;
+}
+
+.barra-menu nav .nav-links .botones .cerrar-sesion:hover {
+  background: #c9605e;
+  color: #f6f7fa;
+}
+
+.barra-menu nav .botones-celular .hamburgesa {
+  display: none;
+}
+
+.barra-menu nav .botones-celular .tacha {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .barra-menu nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .barra-menu nav .nav-links .menu {
+    display: none;
+  }
+  .barra-menu nav .nav-links .activado {
+    display: block;
+    margin-top: 2rem;
+    margin-left: -2rem;
+  }
+  .barra-menu nav .nav-links.nav-active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .barra-menu nav .nav-links.nav-active .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .barra-menu nav .nav-links.nav-active .menu a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #d0d4d8;
+  }
+  .barra-menu nav .nav-links.nav-active .menu button {
+    margin-top: 1rem;
+  }
+  .barra-menu nav .nav-links .botones {
+    margin-top: 1rem;
+    margin-left: 0.3rem;
+  }
+  .barra-menu nav .burger {
+    display: block;
+    cursor: pointer;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .barra-menu nav .burger div {
+    background-color: #c9605e;
+    border-radius: 10px;
+    width: 35px;
+    height: 3px;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 1000px;
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main hr {
+  width: 120px;
+  height: 3px;
+  background: #c9605e;
+  border: 0;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+main .carta-form {
+  width: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  background: white;
+  width: 100%;
+  max-width: 30rem;
+}
+
+main .carta-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 18px;
+}
+
+main .carta-form form .seccion-input {
+  margin-bottom: 1rem;
+}
+
+main .carta-form form .seccion-input input {
+  font-size: 16px;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 5px 5px 0 0;
+}
+
+main .carta-form form .seccion-input input:focus, main .carta-form form .seccion-input input:hover {
+  background: #f0f2f5;
+}
+
+main .carta-form form .seccion-input select {
+  width: 100%;
+  font-size: 15px;
+  padding: 0.5rem;
+}
+
+main .carta-form form button {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #c9605e;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-weight: 700;
+  cursor: pointer;
+  background: #c9605e;
+  color: white;
+}
+
+main .carta-form form button:hover {
+  background: white;
+  color: #c9605e;
+}
+
+main .carta-form form .separador {
+  margin-top: 1rem;
+  background: #d4e3e7;
+  width: 100%;
+  height: 1px;
+}
+
+main .carta-form form .si-cuenta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+main .carta-form form .si-cuenta a {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #c9605e;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-weight: 700;
+  cursor: pointer;
+  background: white;
+  color: #c9605e;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+main .carta-form form .si-cuenta a:hover {
+  background: #c9605e;
+  color: white;
+}
+
+main .carta-form form .a-olvido {
+  text-decoration: none;
+}
+
+main .carta-form form .a-olvido .texto-olvido {
+  text-align: center;
+  margin-top: 1rem;
+  color: #7e919c;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+main .carta-form form .a-olvido .texto-olvido:hover {
+  text-decoration: underline;
+}
+
+.main-inicio hr {
+  width: 120px;
+  height: 3px;
+  background: #c9605e;
+  border: 0;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.main-inicio .imagen-inicio {
+  width: 200px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.main-inicio .seccion-somos {
+  margin-bottom: 2rem;
+}
+
+.main-inicio .seccion-somos h2 {
+  text-align: center;
+}
+
+.main-inicio .seccion-somos .acomodo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.3fr 1fr;
+      grid-template-columns: 0.3fr 1fr;
+  gap: 1rem;
+}
+
+.main-inicio .seccion-somos .acomodo p {
+  text-align: justify;
+}
+
+.main-inicio .seccion-concesionaria {
+  margin-bottom: 2rem;
+}
+
+.main-inicio .seccion-concesionaria h2 {
+  text-align: center;
+}
+
+.main-inicio .seccion-concesionaria .acomodo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.3fr;
+      grid-template-columns: 1fr 0.3fr;
+  gap: 1rem;
+}
+
+.main-inicio .seccion-concesionaria .acomodo p {
+  text-align: justify;
+}
+
+.main-inicio .seccion-oficinas {
+  background: #1e4855;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-inicio .seccion-oficinas h3 {
+  margin-bottom: 0.5rem;
+}
+
+.cartas-vehiculos {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(300px, 4.2rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 4.2rem));
+  gap: 1rem;
+}
+
+.cartas-vehiculos .carta {
+  width: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  position: relative;
+}
+
+.cartas-vehiculos .carta img {
+  border-radius: 10px 10px 0 0;
+  width: 300px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cartas-vehiculos .carta .titulos-carta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.cartas-vehiculos .carta .desc-carta {
+  color: #4f4f4f;
+  padding: 0.2rem 0.5rem;
+}
+
+.cartas-vehiculos .carta .desc-carta:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.cartas-vehiculos .carta .boton-cita {
+  color: #292727;
+  text-align: center;
+  font-size: 16px;
+  padding: 0.8rem;
+  border: none;
+  font-weight: 700;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+
+.cartas-vehiculos .carta .boton-cita:hover {
+  background: #d2d5df;
+}
+
+.carta-recuperacion {
+  background: white;
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 10px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.carta-recuperacion .cuerpo-recuperacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.carta-recuperacion .cuerpo-recuperacion label {
+  font-size: 18px;
+}
+
+.carta-recuperacion .cuerpo-recuperacion input {
+  font-size: 16px;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 5px 5px 0 0;
+  margin-top: 0.5rem;
+}
+
+.carta-recuperacion .cuerpo-recuperacion input:focus, .carta-recuperacion .cuerpo-recuperacion input:hover {
+  background: #f0f2f5;
+}
+
+.carta-recuperacion .botones-recuperacion {
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.carta-recuperacion .botones-recuperacion a {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #c9605e;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-weight: 700;
+  cursor: pointer;
+  background: white;
+  color: #c9605e;
+  text-decoration: none;
+}
+
+.carta-recuperacion .botones-recuperacion a:hover {
+  background: #c9605e;
+  color: white;
+}
+
+.carta-recuperacion .botones-recuperacion button {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #c9605e;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-weight: 700;
+  cursor: pointer;
+  background: #c9605e;
+  color: white;
+}
+
+.carta-recuperacion .botones-recuperacion button:hover {
+  background: white;
+  color: #c9605e;
+}
+
+.carta-recuperacion .botones-recuperacion button:hover {
+  background: #f0f2f5;
+}
+
+@media screen and (max-width: 630px) {
+  .main-inicio .seccion-concesionaria .acomodo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-inicio .seccion-somos .acomodo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* TRANSFORMACION de la hamburgesa */
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+          transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -5px);
+          transform: rotate(45deg) translate(-6px, -5px);
+}
+
+/* ANIMACION */
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

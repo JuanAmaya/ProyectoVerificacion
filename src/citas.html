@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="./../assets/styles/style.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+    <script
+      type="text/javascript"
+      src="./../assets/js/script.js"
+      async
+    ></script>
+
+    <title>Matacars</title>
+  </head>
+  <body onload="cargarAuto(), cargarCitas()">
+    <header class="barra-menu">
+      <nav>
+        <div class="nav-links">
+          <div class="logo">
+            <h1>MATACARS</h1>
+          </div>
+          <div class="secciones menu">
+            <a href="./../index.html">
+              <i class="uil uil-estate"></i>
+              <span>Inicio</span>
+            </a>
+            <a href="./vehiculos.html">
+              <i class="uil uil-car"></i>
+              <span>Vehiculos</span>
+            </a>
+            <a class="pagina-actual" id="pagina-citas" onclick="ordenarCita()">
+              <i class="uil uil-calendar-alt"></i>
+              <span>Citas</span>
+            </a>
+          </div>
+          <div class="botones menu">
+            <a href="./registro.html" id="registrar-ses"
+              ><div class="registro">Registrate</div></a
+            >
+            <a href="./inicio-sesion.html" id="abrir-ses">
+              <div class="inicio-sesion" id="abrir-ses">Inicia Sesion</div></a
+            >
+            <a class="cerrar-sesion" id="cerrar-ses" onclick="logout()">
+              Cerrar Sesion
+            </a>
+          </div>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h2>¡Agenda una cita con nosotros!</h2>
+      <hr />
+      <div class="carta-form">
+        <form action="">
+          <div class="seccion-input">
+            <label for="name">Nombre completo</label>
+            <input type="text" name="name" id="cita-nombre" />
+          </div>
+          <div class="seccion-input">
+            <label for="number">Número de contacto</label>
+            <input type="number" name="number" id="cita-numero" />
+          </div>
+          <div class="seccion-input">
+            <label for="date">Ingrese la fecha</label>
+            <br />
+            <input type="date" name="date" id="cita-fecha" />
+          </div>
+          <div class="seccion-input">
+            <label for="time">Ingrese la hora</label>
+            <br />
+            <input type="time" name="time" id="cita-hora" />
+          </div>
+
+          <div class="seccion-input">
+            <label for="list">Vehiculo</label>
+            <select name="list" id="cita-auto">
+              <option value="Cherokee Laredo">Cherokee Laredo</option>
+              <option value="Honda Odyssey">Honda Odyssey</option>
+              <option value="Cheyenne z71 4x4">Cheyenne z71 4x4</option>
+              <option value="Volvo s80">Volvo s80</option>
+              <option value="Silverado">Silverado</option>
+              <option value="Camry">Camry</option>
+            </select>
+          </div>
+
+          <button type="button" id="send" onclick="citasHandler()">
+            Agendar Cita
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

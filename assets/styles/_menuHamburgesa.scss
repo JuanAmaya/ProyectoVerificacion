@@ -1,0 +1,67 @@
+// Menu Hamburgesa
+@media screen and (max-width: 780px) {
+  .barra-menu {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      .nav-links {
+        .menu {
+          display: none;
+        }
+
+        .activado {
+          display: block;
+          margin-top: 2rem;
+          margin-left: -2rem;
+        }
+
+        &.nav-active {
+          flex-direction: column;
+
+          .menu {
+            display: flex;
+            flex-direction: column;
+
+            a {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 1rem;
+              border-bottom: 1px solid $sombra-seccion;
+            }
+
+            button {
+              margin-top: 1rem;
+            }
+          }
+        }
+
+        .botones {
+          margin-top: 1rem;
+          margin-left: 0.3rem;
+        }
+      }
+
+      .burger {
+        display: block;
+        cursor: pointer;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+        height: max-content;
+
+        div {
+          background-color: $principal;
+          border-radius: 10px;
+          width: 35px;
+          height: 3px;
+          margin: 5px;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}

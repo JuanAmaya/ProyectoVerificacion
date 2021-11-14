@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $fondo;
+}
+
+@mixin botonesEstilo($fondo, $color) {
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid $principal;
+  padding: 0.5rem 1rem;
+  transition: 0.5s ease;
+  font-weight: 700;
+  cursor: pointer;
+  background: $fondo;
+  color: $color;
+
+  &:hover {
+    background: $color;
+    color: $fondo;
+  }
+}
+
+.barra-menu {
+  background: $fondo-barra;
+  box-shadow: $formato-sombra-barra;
+
+  nav {
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem;
+
+      .logo {
+        color: $principal;
+        pointer-events: none;
+      }
+
+      .secciones {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          border-radius: 20px;
+          background: $fondo-barra;
+          padding: 0.5rem 1rem;
+          transition: 0.5s ease;
+
+          i {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            color: $principal;
+          }
+
+          span {
+            color: $palabras-barra;
+          }
+
+          &:hover {
+            background: $sombra-seccion;
+          }
+        }
+
+        .pagina-actual {
+          background: $pagina-actual;
+        }
+      }
+
+      .botones {
+        display: flex;
+        gap: 1rem;
+
+        a {
+          text-decoration: none;
+        }
+
+        .registro {
+          @include botonesEstilo($principal, $letra-boton);
+        }
+
+        .inicio-sesion {
+          @include botonesEstilo($fondo-barra, $principal);
+        }
+
+        .cerrar-sesion {
+          @include botonesEstilo($fondo-barra, $principal);
+        }
+      }
+    }
+
+    .botones-celular {
+      .hamburgesa {
+        display: none;
+      }
+
+      .tacha {
+        display: none;
+      }
+    }
+  }
+}
+
+@import "./menuHamburgesa";
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 1000px;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  justify-content: flex-start;
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  hr {
+    width: 120px;
+    height: 3px;
+    background: $principal;
+    border: 0;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .carta-form {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: $formato-sombra;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background: $carta-form;
+    width: 100%;
+    max-width: 30rem;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+
+      .seccion-input {
+        margin-bottom: 1rem;
+
+        input {
+          font-size: 16px;
+          padding: 0.5rem;
+          background: none;
+          border: none;
+          border-bottom: 1px solid black;
+          width: 100%;
+          transition: 0.3s ease;
+          border-radius: 5px 5px 0 0;
+
+          &:focus,
+          &:hover {
+            background: $fondo;
+          }
+        }
+
+        select {
+          width: 100%;
+          font-size: 15px;
+          padding: 0.5rem;
+        }
+      }
+
+      button {
+        @include botonesEstilo($principal, $letra-boton);
+      }
+
+      .separador {
+        margin-top: 1rem;
+        background: $separador-cuenta;
+        width: 100%;
+        height: 1px;
+      }
+
+      .si-cuenta {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        a {
+          @include botonesEstilo($letra-boton, $principal);
+          margin-top: 1rem;
+          text-decoration: none;
+        }
+      }
+
+      .a-olvido {
+        text-decoration: none;
+
+        .texto-olvido {
+          text-align: center;
+          margin-top: 1rem;
+          color: $palabras-barra;
+          transition: 0.5s ease;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-inicio {
+  hr {
+    width: 120px;
+    height: 3px;
+    background: $principal;
+    border: 0;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .imagen-inicio {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: $formato-sombra;
+  }
+
+  .seccion-somos {
+    margin-bottom: 2rem;
+    h2 {
+      text-align: center;
+    }
+
+    .acomodo {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      gap: 1rem;
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+
+  .seccion-concesionaria {
+    margin-bottom: 2rem;
+
+    h2 {
+      text-align: center;
+    }
+
+    .acomodo {
+      display: grid;
+      grid-template-columns: 1fr 0.3fr;
+      gap: 1rem;
+
+      p {
+        text-align: justify;
+      }
+    }
+  }
+
+  .seccion-oficinas {
+    background: $fondo-visitanos;
+    border-radius: 10px;
+    box-shadow: $formato-sombra;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.cartas-vehiculos {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 4.2rem));
+  gap: 1rem;
+
+  .carta {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: $formato-sombra;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+    position: relative;
+
+    img {
+      border-radius: 10px 10px 0 0;
+      width: 300px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .titulos-carta {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      padding: 0.5rem;
+    }
+
+    .desc-carta {
+      color: $letra-carta;
+      padding: 0.2rem 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .boton-cita {
+      color: $letra-pedirCita;
+      text-align: center;
+      font-size: 16px;
+      padding: 0.8rem;
+      border: none;
+      font-weight: 700;
+      border-radius: 0 0 10px 10px;
+      cursor: pointer;
+      transition: 0.5s ease;
+      text-decoration: none;
+
+      &:hover {
+        background: $fondo-btnCita;
+      }
+    }
+  }
+}
+
+.carta-recuperacion {
+  background: $carta-form;
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+
+  .cuerpo-recuperacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    label {
+      font-size: 18px;
+    }
+
+    input {
+      font-size: 16px;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      border-bottom: 1px solid black;
+      width: 100%;
+      transition: 0.3s ease;
+      border-radius: 5px 5px 0 0;
+      margin-top: 0.5rem;
+
+      &:focus,
+      &:hover {
+        background: $fondo;
+      }
+    }
+  }
+
+  .botones-recuperacion {
+    font-weight: 700;
+    margin-top: 1.5rem;
+
+    a {
+      @include botonesEstilo($letra-boton, $principal);
+      text-decoration: none;
+    }
+
+    button {
+      @include botonesEstilo($principal, $letra-boton);
+
+      &:hover {
+        background: $fondo;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  @mixin acomodoTextoImg {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-inicio .seccion-concesionaria .acomodo {
+    @include acomodoTextoImg();
+  }
+
+  .main-inicio .seccion-somos .acomodo {
+    @include acomodoTextoImg();
+  }
+}
+
+/* TRANSFORMACION de la hamburgesa */
+.toggle {
+  .line1 {
+    transform: rotate(-45deg) translate(-6px, 5px);
+  }
+
+  .line2 {
+    opacity: 0;
+  }
+
+  .line3 {
+    transform: rotate(45deg) translate(-6px, -5px);
+  }
+}
+
+/* ANIMACION */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
