@@ -111,10 +111,10 @@ function apartarCarro(idAuto) {
     if (user) {
       var uid = user.uid;
       if (user != null) {
-        window.location.href = "./citas.html";
+        window.location.href = "/src/citas.html";
       }
     } else {
-      window.location.href = "./registro.html";
+      window.location.href = "/src/registro.html";
       alert("Debes de tener cuenta para pedir una cita.");
     }
   });
@@ -130,10 +130,10 @@ function ordenarCita(pagina) {
     if (user) {
       var uid = user.uid;
       if (user != null) {
-        window.location.href = "./citas.html";
+        window.location.href = "/src/citas.html";
       }
     } else {
-      window.location.href = "./registro.html";
+      window.location.href = "/src/registro.html";
       alert("Debes de tener cuenta para pedir una cita.");
     }
   });
