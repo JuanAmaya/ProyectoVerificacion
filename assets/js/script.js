@@ -265,6 +265,7 @@ function logout() {
     .then(function () {
       // Sign-out succesful.
       alert("Se ha salido de la sesion");
+      window.location.href = "/index.html";
     })
     .catch(function (error) {
       // An error happend.
@@ -321,15 +322,23 @@ function citasHandler() {
     return;
   }
 
-  const crearCita = {
-    Nombre: citaNombre,
-    Numero: citaNumero,
-    Fecha: citaFecha,
-    Hora: citaHora,
-    Vehiculo: citaAuto,
-  };
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      var uid = user.uid;
 
-  firebaseRef.push(crearCita);
+      const crearCita = {
+        idUsuario: uid,
+        Nombre: citaNombre,
+        Numero: citaNumero,
+        Fecha: citaFecha,
+        Hora: citaHora,
+        Vehiculo: citaAuto,
+      };
+
+      firebaseRef.push(crearCita);
+    }
+  });
+
   alert("Fecha Agendada");
   document.getElementById("cita-nombre").value = "";
   document.getElementById("cita-numero").value = "";
