@@ -64,7 +64,7 @@ function cartasVehiculos() {
     var colorC = document.createTextNode("Color: " + color);
     var textoBoton = document.createTextNode("Pedir cita");
 
-    image.src = "./../assets/images/carros/" + carImage + ".jpg";
+    image.src = "./assets/images/carros/" + carImage + ".jpg";
 
     div.classList.add("carta");
     div2.classList.add("titulos-carta");
