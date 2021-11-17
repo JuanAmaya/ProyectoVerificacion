@@ -111,10 +111,10 @@ function apartarCarro(idAuto) {
     if (user) {
       var uid = user.uid;
       if (user != null) {
-        window.location.href = "/src/citas.html";
+        window.location.href = "./citas.html";
       }
     } else {
-      window.location.href = "/src/registro.html";
+      window.location.href = "./registro.html";
       alert("Debes de tener cuenta para pedir una cita.");
     }
   });
@@ -130,10 +130,10 @@ function ordenarCita(pagina) {
     if (user) {
       var uid = user.uid;
       if (user != null) {
-        window.location.href = "/src/citas.html";
+        window.location.href = "./citas.html";
       }
     } else {
-      window.location.href = "/src/registro.html";
+      window.location.href = "./registro.html";
       alert("Debes de tener cuenta para pedir una cita.");
     }
   });
@@ -198,7 +198,7 @@ function login() {
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
-      window.location.href = "../index.html";
+      window.location.href = "./index.html";
       console.log("funciono");
       if (user !== null) {
         //document.getElementById("texto").innerHTML = user.email;
@@ -243,7 +243,7 @@ function signUp() {
       // Signed in
       var user = userCredential.user;
       alert("Cuenta Registrada Exitosamente");
-      window.location.href = "../index.html";
+      window.location.href = "./index.html";
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -265,7 +265,7 @@ function logout() {
     .then(function () {
       // Sign-out succesful.
       alert("Se ha salido de la sesion");
-      window.location.href = "/index.html";
+      window.location.href = "./index.html";
     })
     .catch(function (error) {
       // An error happend.
