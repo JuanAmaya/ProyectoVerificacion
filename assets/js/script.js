@@ -264,8 +264,8 @@ function logout() {
     .signOut()
     .then(function () {
       // Sign-out succesful.
-      alert("Se ha salido de la sesion");
       window.location.href = "./index.html";
+      alert("Se ha salido de la sesion");
     })
     .catch(function (error) {
       // An error happend.
